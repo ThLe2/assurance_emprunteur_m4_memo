@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Le libre choix, de Lagarde à Lemoine</title>
+<style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head>
+<body>
+<header class="bandeau"><div class="wrap">
+ <div class="chapitre">IOBSP Niveau 2 · Journée 10 <span>/</span> Les assurances emprunteurs — Module 4</div><h1>Le libre choix, de Lagarde à Lemoine</h1><p class="sous">Fiche mémo détaillée — le droit est acquis ; encore faut-il le faire respecter</p>
+</div></header>
+<div class="wrap">
+<a class="dl" href="J10_M4_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<h2><span class="num">1 ·</span>Quatre lois, une fenêtre qui s&#x27;élargit</h2>
+<div class="carte">
+<table><thead><tr>
+<th>2010</th>
+<th>2014</th>
+<th>2017</th>
+<th>2022</th>
+</tr></thead><tbody>
+<tr><td><b>LOI LAGARDE</b></td><td><b>LOI HAMON</b></td><td><b>AMDT BOURQUIN</b></td><td><b>LOI LEMOINE</b></td></tr>
+<tr><td>Loi n° 2010-737 du 1er juillet</td><td>Loi n° 2014-344 du 17 mars</td><td>Loi n° 2017-203 du 21 février</td><td>Loi n° 2022-270 du 28 février</td></tr>
+<tr><td>Pose le principe de la <b>DÉLIAISON</b> —</td><td>Changement possible pendant les 12</td><td>Résiliation <b>À CHAQUE DATE</b></td><td><b>RÉSILIATION À TOUT MOMENT</b>, sans</td></tr>
+<tr><td>mais <b>AU SEUL MOMENT DE LA SOUSCRIPTION</b></td><td><b>PREMIERS MOIS</b></td><td><b>ANNIVERSAIRE</b></td><td>frais ni préavis</td></tr>
+</tbody></table>
+<div class="enc"><span class="t">POURQUOI BOURQUIN NE SUFFISAIT PAS</span>Il fallait connaître la date anniversaire — laquelle prêtait à discussion — et respecter un préavis. Beaucoup de demandes étaient écartées pour des motifs de calendrier.</div>
+<div class="enc"><span class="t">ENTRÉE EN VIGUEUR DE LA RÉSILIATION À TOUT MOMENT</span>1er juin 2022 pour les nouvelles offres de prêt · 1er septembre 2022 pour les contrats en cours.</div>
+</div>
+<h2><span class="num">2 ·</span>Les deux textes fondateurs</h2>
+<div class="carte">
+<div class="enc"><span class="t">ARTICLE L. 113-12-2 DU CODE DES ASSURANCES — LA RÉSILIATION</span>L&#x27;assuré peut résilier le contrat <b>À TOUT MOMENT</b> à compter de la signature de l&#x27;offre de prêt.</div>
+<div class="enc"><span class="t">ARTICLE L. 313-30 DU CODE DE LA CONSOMMATION — LA SUBSTITUTION</span>« Le prêteur <b>NE PEUT PAS REFUSER</b> en garantie un autre contrat d&#x27;assurance dès lors que ce contrat présente un niveau de garantie <b>ÉQUIVALENT</b> au contrat d&#x27;assurance qu&#x27;il propose. […] Toute décision de refus est explicite et comporte l&#x27;<b>INTÉGRALITÉ DES MOTIFS</b> de refus. Elle précise, le cas échéant, les informations et garanties manquantes. »</div>
+<div class="enc"><span class="t">LA CONSTRUCTION DU TEXTE EST À SOULIGNER</span>Ce n&#x27;est PAS « le prêteur <b>PEUT ACCEPTER</b> ». C&#x27;est « le prêteur <b>NE PEUT PAS REFUSER</b> ». <b>L&#x27;ACCEPTATION EST LA RÈGLE</b>. <b>LE REFUS EST L&#x27;EXCEPTION</b> — et une exception encadrée.</div>
+</div>
+<h2><span class="num">3 ·</span>Ce que le prêteur ne peut pas faire</h2>
+<div class="carte">
+<ol class="q">
+<li>L&#x27;interdiction Le texte</li>
+<li><b>IL NE PEUT PAS REFUSER SANS MOTIVER</b>. Le refus motifs, et précise les informations et garanties Un refus laconique n&#x27;est pas un refus valable — et un refus qui ne dit pas ce qui manque prive l&#x27;emprunteur de la possibilité de corriger. est explicite, comporte l&#x27;intégralité des Art. L. 313-30 manquantes. C. consom.</li>
+<li><b>IL DOIT RÉPONDRE DANS UN DÉLAI DE DIX JOURS</b> la demande de substitution <b>OUVRÉS</b>, à compter de la réception de Art. L. 313-31</li>
+<li><b>EN CAS D&#x27;ACCEPTATION</b>, <b>IL MODIFIE LE CONTRAT PAR AVENANT</b>, également sous dix jours ouvrés, en mentionnant notamment <b>LE NOUVEAU TAEG</b> (logique : l&#x27;assurance y entre — module 1) Art. L. 313-31</li>
+<li><b>IL NE PEUT PAS FACTURER CET AVENANT</b> : aucun frais supplémentaire ne peut être exigé pour son émission Art. L. 313-31</li>
+<li><b>IL NE PEUT NI MODIFIER LE TAUX</b> — fixe, variable ou révisable — <b>NI LES CONDITIONS D&#x27;OCTROI</b> du crédit, <b>Y COMPRIS SON MODE D&#x27;AMORTISSEMENT</b> Art. L. 313-32</li>
+</ol>
+<div class="enc"><span class="t">MESUREZ LA PORTÉE DE LA CINQUIÈME INTERDICTION</span>Sans elle, une banque pourrait accepter la délégation puis <b>RELEVER LE TAUX DU CRÉDIT</b> pour compenser la marge perdue sur l&#x27;assurance. Le législateur l&#x27;a interdit expressément.</div>
+</div>
+<h2><span class="num">4 ·</span>La dispense de questionnaire de santé</h2>
+<div class="carte">
+<div class="enc al"><span class="t">UNE MESURE DISTINCTE DU DROIT DE RÉSILIATION — NE PAS CONFONDRE</span>Le questionnaire de santé est supprimé sous <b>DEUX CONDITIONS</b> — <b>ET ELLES SONT CUMULATIVES</b>.</div>
+<p>La condition</p>
+<ol class="q">
+<li>La part assurée n&#x27;excède pas 200 000 € <b>PAR EMPRUNTEUR</b></li>
+<li>Le remboursement du prêt intervient <b>AVANT LE</b> 60e <b>ANNIVERSAIRE</b> de l&#x27;assuré</li>
+</ol>
+<p>Par <b>EMPRUNTEUR</b>, et non par prêt : sur un couple assuré à 50 % chacun, c&#x27;est la part de chacun qui compte</p>
+<div class="enc"><span class="t">SI L&#x27;UNE DES DEUX FAIT DÉFAUT, LE QUESTIONNAIRE REDEVIENT EXIGIBLE</span>L&#x27;exemple à retenir : un emprunteur de 48 ans souscrivant sur 20 ans terminera son prêt à 68 ans. Il n&#x27;est PAS dispensé, même si sa part assurée est faible.</div>
+<div class="enc"><span class="t">LA PORTÉE DE CETTE MESURE</span>Elle est considérable pour les personnes présentant un risque de santé : sans questionnaire, il n&#x27;y a ni surprime, ni exclusion, ni refus fondés sur l&#x27;état de santé. Rappel J8 : la même loi Lemoine a ramené le droit à l&#x27;oubli de 10 à 5 ans et l&#x27;a étendu à l&#x27;hépatite C. La journée 8 l&#x27;a traité sous l&#x27;angle de l&#x27;accès au crédit.</div>
+</div>
+<h2><span class="num">5 ·</span>Le droit et la pratique — là où vous devenez utile</h2>
+<div class="carte">
+<div class="enc"><span class="t">CE QUE DES TRAVAUX PARLEMENTAIRES ONT RELEVÉ</span>• Des délais de traitement très supérieurs au délai légal de dix jours ouvrés. • Des dossiers déclarés incomplets alors que les pièces réclamées n&#x27;étaient pas exigées par la loi. • Des frais réclamés à des clients souhaitant changer d&#x27;assurance. • Des réponses contradictoires d&#x27;un courrier à l&#x27;autre. Ces pratiques ont également donné lieu à des sanctions administratives.</div>
+<div class="enc"><span class="t">VOTRE VALEUR AJOUTÉE EST EXACTEMENT LÀ</span><b>UN CLIENT SEUL</b>, <b>FACE À UN REFUS LACONIQUE OU À UN SILENCE</b>, <b>RENONCE</b>.</div>
+<div class="enc"><span class="t">UN INTERMÉDIAIRE QUI CONNAÎT LES TEXTES NE RENONCE PAS.</span></div>
+<table><thead><tr>
+<th>Votre réponse — et elle s&#x27;écrit</th>
+<th>Ce que vous rappelez</th>
+</tr></thead><tbody>
+<tr><td>① Viser l&#x27;art. L. 313-30</td><td>Le refus doit être explicite et comporter l&#x27;intégralité des motifs, avec les garanties manquantes</td></tr>
+<tr><td>② Viser l&#x27;art. L. 313-31</td><td>Le délai de dix jours ouvrés</td></tr>
+<tr><td>③ Viser l&#x27;art. L. 313-32</td><td>L&#x27;interdiction de modifier le taux ou les conditions d&#x27;octroi en contrepartie</td></tr>
+</tbody></table>
+<p>Dans la très grande majorité des cas, un courrier visant ces trois articles suffit à débloquer le dossier.</p>
+<p><b>CE QUE CE MODULE NE TRAITE PAS</b></p>
+<p>Le droit de substitution suppose une <b>ÉQUIVALENCE DE GARANTIES</b>. Qui l&#x27;apprécie, et selon quels critères ? C&#x27;est tout l&#x27;objet du <b>MODULE</b> 5.</p>
+<div class="enc"><span class="t">À RETENIR</span>• Lagarde 2010 : la déliaison, à la souscription · Hamon 2014 : les 12 premiers mois · Bourquin 2017 : la date anniversaire · Lemoine 2022 : à tout moment. • L. 113-12-2 C. assur. : la résiliation à tout moment · L. 313-30 C. consom. : le prêteur <b>NE PEUT PAS REFUSER</b> un contrat équivalent, et tout refus est motivé. • Dix jours ouvrés pour répondre · avenant gratuit · ni le taux ni les conditions d&#x27;octroi ne peuvent être modifiés. • Dispense de questionnaire : deux conditions <b>CUMULATIVES</b> — 200 000 € par <b>EMPRUNTEUR</b> et remboursement avant 60 ans.</div>
+<p>Sources vérifiées au 20 août 2026. Code des assurances, article L. 113-12-2 (résiliation à tout moment à compter de la signature de l&#x27;offre de prêt) et code de la consommation, articles L. 313-30 (interdiction de refuser un contrat équivalent, refus explicite comportant l&#x27;intégralité des motifs et les garanties manquantes) et L. 313-31 (délai de dix jours ouvrés, avenant mentionnant le nouveau TAEG, absence de frais supplémentaires ; applicable aux nouvelles offres émises à compter du 1er juin 2022) — textes relevés sur Légifrance. Loi n° 2010-737 du 1er juillet 2010 (Lagarde), loi n° 2014-344 du 17 mars 2014 (Hamon), loi n° 2017-203 du 21 février 2017 (amendement Bourquin), loi n° 2022-270 du 28 février 2022 (Lemoine), publiée au JO du 1er mars 2022. Rappel de la journée 8, module 6, pour le droit à l&#x27;oubli. Arrêté du 18 juillet 2022, annexe A, section A.4. <b>RÉSERVES</b> : l&#x27;article L. 313-32 provient de sources concordantes et n&#x27;a pas été lu directement sur le texte — vérifier sa rédaction avant de le citer mot pour mot ; une jurisprudence est fréquemment citée en doctrine sur le refus non motivé présenté comme un abus de droit, mais l&#x27;arrêt n&#x27;a pas été lu et n&#x27;est pas repris ici ; les constats de pratiques faisant obstacle au droit de substitution proviennent de travaux parlementaires et de sources secondaires et sont présentés sans chiffres ni nom d&#x27;établissement ; le champ exact de la dispense de questionnaire — prêts immobiliers à usage d&#x27;habitation ou mixte — mérite vérification si la question est posée.</p>
+</div>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</div></body></html>
